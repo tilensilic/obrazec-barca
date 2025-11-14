@@ -49,5 +49,37 @@
 			</div>
 		</div>
 	</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector(".prijava");
+
+    form.addEventListener("submit", function(e) {
+        e.preventDefault(); 
+
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("geslo").value.trim(); // ✅ popravljeno
+
+        if(email && password){
+            Swal.fire({
+                icon: 'success',
+                title: 'Prijava uspešna!',
+                text: 'Dobrodošli nazaj 👋',
+                confirmButtonColor: '#4c4873'
+            });
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Napaka',
+                text: 'Prosimo, izpolnite vsa polja.',
+                confirmButtonColor: '#4c4873'
+            });
+        }
+    });
+});
+</script>
+
+
 </body>
 </html>
