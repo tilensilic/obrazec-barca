@@ -10,7 +10,6 @@ body, html {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Glavni container */
 .glavno {
     display: flex;
     width: 100%;
@@ -18,7 +17,6 @@ body, html {
     background-color: #1b1636;
 }
 
-/* Leva stran */
 .levo {
     flex: 1;
     background-image: url("../slike/background/levi-bg.png");
@@ -26,7 +24,6 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 
 .desno {
     flex: 1;
@@ -37,7 +34,6 @@ body, html {
     padding: 40px 20px;
 }
 
-/* Prijavno okno */
 .prijavno-okno {
     max-width: 380px;
     width: 100%;
@@ -48,7 +44,6 @@ body, html {
     gap: 15px;
 }
 
-/* Glava */
 .glava img.barca-logo {
     width: 70px;
     margin-bottom: 15px;
@@ -68,7 +63,6 @@ body, html {
     line-height: 1.5;
 }
 
-/* Prijava */
 .prijava {
     display: flex;
     flex-direction: column;
@@ -98,7 +92,6 @@ body, html {
     border-color: #a18aff;
 }
 
-/* Gumb */
 .continue {
     margin-top: 15px;
     padding: 12px;
@@ -116,7 +109,6 @@ body, html {
     background-color: #6b66a3;
     color: #fff;
 }
-
 
 .ali {
     display: flex;
@@ -136,34 +128,23 @@ body, html {
 
 @media (max-width: 768px) {
     .glavno {
-        flex-direction: column; 
+        flex-direction: column;
     }
 
     .levo {
-        height: 200px; 
-        flex: none;
+        display: none;
     }
 
     .desno {
         flex: none;
-        padding: 20px 15px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
     }
 
-    .glava h2 {
-        font-size: 18px;
-    }
-
-    .glava p {
-        font-size: 13px;
-    }
-
-    .prijava input {
-        padding: 10px;
-        font-size: 14px;
-    }
-
-    .continue {
-        padding: 10px;
-        font-size: 14px;
+    .prijavno-okno {
+        max-width: 90%;
+        margin: 0 auto;
     }
 }
