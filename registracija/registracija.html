@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>      
+    <title>Spletna stran</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />      
+</head>
+<body>
+    <div class="glavno">
+        <img src="slike/barca-logo.svg" alt="FC Barcelona Logo" class="logo">
+        <h1>BARÇA</h1>
+        <p class="podnaslov">Spotify Camp Nou</p>
+
+        <form id="registerForm">
+            <label for="first-name">First name</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last name</label>
+            <input type="text" id="last-name" name="last-name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <div id="passwordRequirements" style="display:none;">
+                <ul>
+                    <li id="req-length" class="invalid"><span class="req-icon">✗</span> at least 8 characters</li>
+                    <li id="req-case" class="invalid"><span class="req-icon">✗</span> uppercase and lowercase letters</li>
+                    <li id="req-number" class="invalid"><span class="req-icon">✗</span> number or special character</li>
+                    <li id="req-email" class="invalid"><span class="req-icon">✗</span> does not contain email</li>
+                </ul>
+            </div>
+
+            <label for="country">Country</label>
+				<select id="country" name="country" required>
+					<option value="">-- Izberite državo --</option>
+					<option value="Afghanistan">Afghanistan</option>
+					<option value="Albania">Albania</option>
+					<option value="Algeria">Algeria</option>
+					<option value="Andorra">Andorra</option>
+					<option value="Angola">Angola</option>
+					<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+					<option value="Argentina">Argentina</option>
+					<option value="Armenia">Armenia</option>
+					<option value="Australia">Australia</option>
+					<option value="Austria">Austria</option>
+					<option value="Azerbaijan">Azerbaijan</option>
+					<option value="Bahamas">Bahamas</option>
+					<option value="Bahrain">Bahrain</option>
+					<option value="Bangladesh">Bangladesh</option>
+					<option value="Barbados">Barbados</option>
+					<option value="Belarus">Belarus</option>
+					<option value="Belgium">Belgium</option>
+					<option value="Belize">Belize</option>
+					<option value="Benin">Benin</option>
+					<option value="Bermuda">Bermuda</option>
+					<option value="Bhutan">Bhutan</option>
+					<option value="Bolivia">Bolivia</option>
+					<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+					<option value="Botswana">Botswana</option>
+					<option value="Brazil">Brazil</option>
+					<option value="Brunei">Brunei</option>
+					<option value="Bulgaria">Bulgaria</option>
+					<option value="Burkina Faso">Burkina Faso</option>
+					<option value="Burundi">Burundi</option>
+					<option value="Cambodia">Cambodia</option>
+					<option value="Cameroon">Cameroon</option>
+					<option value="Canada">Canada</option>
+					<option value="Cape Verde">Cape Verde</option>
+					<option value="Central African Republic">Central African Republic</option>
+					<option value="Chad">Chad</option>
+					<option value="Chile">Chile</option>
+					<option value="China">China</option>
+					<option value="Colombia">Colombia</option>
+					<option value="Comoros">Comoros</option>
+					<option value="Congo">Congo</option>
+					<option value="Costa Rica">Costa Rica</option>
+					<option value="Côte d'Ivoire">Côte d'Ivoire</option>
+					<option value="Croatia">Croatia</option>
+					<option value="Cuba">Cuba</option>
+					<option value="Cyprus">Cyprus</option>
+					<option value="Czech Republic">Czech Republic</option>
+					<option value="Denmark">Denmark</option>
+					<option value="Djibouti">Djibouti</option>
+					<option value="Dominica">Dominica</option>
+					<option value="Dominican Republic">Dominican Republic</option>
+					<option value="East Timor">East Timor</option>
+					<option value="Ecuador">Ecuador</option>
+					<option value="Egypt">Egypt</option>
+					<option value="El Salvador">El Salvador</option>
+					<option value="Equatorial Guinea">Equatorial Guinea</option>
+					<option value="Eritrea">Eritrea</option>
+					<option value="Estonia">Estonia</option>
+					<option value="Ethiopia">Ethiopia</option>
+					<option value="Fiji">Fiji</option>
+					<option value="Finland">Finland</option>
+					<option value="France">France</option>
+					<option value="Gabon">Gabon</option>
+					<option value="Gambia">Gambia</option>
+					<option value="Georgia">Georgia</option>
+					<option value="Germany">Germany</option>
+					<option value="Ghana">Ghana</option>
+					<option value="Gibraltar">Gibraltar</option>
+					<option value="Greece">Greece</option>
+					<option value="Grenada">Grenada</option>
+					<option value="Guatemala">Guatemala</option>
+					<option value="Guinea">Guinea</option>
+					<option value="Guinea-Bissau">Guinea-Bissau</option>
+					<option value="Guyana">Guyana</option>
+					<option value="Haiti">Haiti</option>
+					<option value="Honduras">Honduras</option>
+					<option value="Hong Kong">Hong Kong</option>
+					<option value="Hungary">Hungary</option>
+					<option value="Iceland">Iceland</option>
+					<option value="India">India</option>
+					<option value="Indonesia">Indonesia</option>
+					<option value="Iran">Iran</option>
+					<option value="Iraq">Iraq</option>
+					<option value="Ireland">Ireland</option>
+					<option value="Israel">Israel</option>
+					<option value="Italy">Italy</option>
+					<option value="Jamaica">Jamaica</option>
+					<option value="Japan">Japan</option>
+					<option value="Jordan">Jordan</option>
+					<option value="Kazakhstan">Kazakhstan</option>
+					<option value="Kenya">Kenya</option>
+					<option value="Kiribati">Kiribati</option>
+					<option value="North Korea">North Korea</option>
+					<option value="South Korea">South Korea</option>
+					<option value="Kuwait">Kuwait</option>
+					<option value="Kyrgyzstan">Kyrgyzstan</option>
+					<option value="Laos">Laos</option>
+					<option value="Latvia">Latvia</option>
+					<option value="Lebanon">Lebanon</option>
+					<option value="Lesotho">Lesotho</option>
+					<option value="Liberia">Liberia</option>
+					<option value="Libya">Libya</option>
+					<option value="Liechtenstein">Liechtenstein</option>
+					<option value="Lithuania">Lithuania</option>
+					<option value="Luxembourg">Luxembourg</option>
+					<option value="Macedonia">Macedonia</option>
+					<option value="Madagascar">Madagascar</option>
+					<option value="Malawi">Malawi</option>
+					<option value="Malaysia">Malaysia</option>
+					<option value="Maldives">Maldives</option>
+					<option value="Mali">Mali</option>
+					<option value="Malta">Malta</option>
+					<option value="Marshall Islands">Marshall Islands</option>
+					<option value="Mauritania">Mauritania</option>
+					<option value="Mauritius">Mauritius</option>
+					<option value="Mexico">Mexico</option>
+					<option value="Micronesia">Micronesia</option>
+					<option value="Moldova">Moldova</option>
+					<option value="Monaco">Monaco</option>
+					<option value="Mongolia">Mongolia</option>
+					<option value="Montenegro">Montenegro</option>
+					<option value="Morocco">Morocco</option>
+					<option value="Mozambique">Mozambique</option>
+					<option value="Myanmar">Myanmar</option>
+					<option value="Namibia">Namibia</option>
+					<option value="Nauru">Nauru</option>
+					<option value="Nepal">Nepal</option>
+					<option value="Netherlands">Netherlands</option>
+					<option value="New Zealand">New Zealand</option>
+					<option value="Nicaragua">Nicaragua</option>
+					<option value="Niger">Niger</option>
+					<option value="Nigeria">Nigeria</option>
+					<option value="Norway">Norway</option>
+					<option value="Oman">Oman</option>
+					<option value="Pakistan">Pakistan</option>
+					<option value="Palau">Palau</option>
+					<option value="Palestine">Palestine</option>
+					<option value="Panama">Panama</option>
+					<option value="Papua New Guinea">Papua New Guinea</option>
+					<option value="Paraguay">Paraguay</option>
+					<option value="Peru">Peru</option>
+					<option value="Philippines">Philippines</option>
+					<option value="Poland">Poland</option>
+					<option value="Portugal">Portugal</option>
+					<option value="Puerto Rico">Puerto Rico</option>
+					<option value="Qatar">Qatar</option>
+					<option value="Romania">Romania</option>
+					<option value="Russia">Russia</option>
+					<option value="Rwanda">Rwanda</option>
+					<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+					<option value="Saint Lucia">Saint Lucia</option>
+					<option value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+					<option value="Samoa">Samoa</option>
+					<option value="San Marino">San Marino</option>
+					<option value="Sao Tome and Principe">Sao Tome and Principe</option>
+					<option value="Saudi Arabia">Saudi Arabia</option>
+					<option value="Senegal">Senegal</option>
+					<option value="Serbia and Montenegro">Serbia and Montenegro</option>
+					<option value="Seychelles">Seychelles</option>
+					<option value="Sierra Leone">Sierra Leone</option>
+					<option value="Singapore">Singapore</option>
+					<option value="Slovakia">Slovakia</option>
+					<option value="Slovenia">Slovenia</option>
+					<option value="Solomon Islands">Solomon Islands</option>
+					<option value="Somalia">Somalia</option>
+					<option value="South Africa">South Africa</option>
+					<option value="Spain">Spain</option>
+					<option value="Sri Lanka">Sri Lanka</option>
+					<option value="Sudan">Sudan</option>
+					<option value="Suriname">Suriname</option>
+					<option value="Swaziland">Swaziland</option>
+					<option value="Sweden">Sweden</option>
+					<option value="Switzerland">Switzerland</option>
+					<option value="Syria">Syria</option>
+					<option value="Taiwan">Taiwan</option>
+					<option value="Tajikistan">Tajikistan</option>
+					<option value="Tanzania">Tanzania</option>
+					<option value="Thailand">Thailand</option>
+					<option value="Togo">Togo</option>
+					<option value="Tonga">Tonga</option>
+					<option value="Trinidad and Tobago">Trinidad and Tobago</option>
+					<option value="Tunisia">Tunisia</option>
+					<option value="Turkey">Turkey</option>
+					<option value="Turkmenistan">Turkmenistan</option>
+					<option value="Tuvalu">Tuvalu</option>
+					<option value="Uganda">Uganda</option>
+					<option value="Ukraine">Ukraine</option>
+					<option value="United Arab Emirates">United Arab Emirates</option>
+					<option value="United Kingdom">United Kingdom</option>
+					<option value="United States">United States</option>
+					<option value="Uruguay">Uruguay</option>
+					<option value="Uzbekistan">Uzbekistan</option>
+					<option value="Vanuatu">Vanuatu</option>
+					<option value="Vatican City">Vatican City</option>
+					<option value="Venezuela">Venezuela</option>
+					<option value="Vietnam">Vietnam</option>
+					<option value="Yemen">Yemen</option>
+					<option value="Zambia">Zambia</option>
+					<option value="Zimbabwe">Zimbabwe</option>
+				</select>
+            <div class="checkbox">
+                <input type="checkbox" id="marketing" name="marketing">
+                <label for="marketing">I agree to receive commercial communications about FC BARCELONA, its sponsors and affiliated entities.</label>
+            </div>
+
+            <button type="submit" class="create-account">CREATE ACCOUNT</button>
+        </form>
+
+        <p class="text">
+           Already have an account?
+        </p>
+
+        <a href="../index.html" class="login-link">Login</a>
+    </div>
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const passwordInput = document.getElementById('password');
+    const emailInput = document.getElementById('email');
+    const requirementsDiv = document.getElementById('passwordRequirements');
+    const form = document.getElementById('registerForm');
+
+
+    const commonPasswords = [
+        "123456", "password", "qwerty", "abc123", "111111",
+        "letmein", "football", "iloveyou", "admin", "welcome"
+    ];
+
+
+    function checkPasswordRequirements(password, email) {
+        const emailLocal = (email && email.includes('@')) ? email.split('@')[0].toLowerCase() : '';
+        return {
+            length: password.length >= 8,
+            case: /[a-z]/.test(password) && /[A-Z]/.test(password),
+            number: /[0-9]/.test(password) || /[^a-zA-Z0-9]/.test(password),
+            email: !(emailLocal && password.toLowerCase().includes(emailLocal)),
+            common: !commonPasswords.some(common => password.toLowerCase().includes(common))
+        };
+    }
+
+    
+    function updateRequirementUI(requirements) {
+        function toggle(id, valid) {
+            const el = document.getElementById(id);
+            if (!el) return;
+            const icon = el.querySelector('.req-icon');
+            if (valid) {
+                el.classList.add('valid');
+                el.classList.remove('invalid');
+                icon.textContent = '✓';
+            } else {
+                el.classList.remove('valid');
+                el.classList.add('invalid');
+                icon.textContent = '✗';
+            }
+        }
+        toggle('req-length', requirements.length);
+        toggle('req-case', requirements.case);
+        toggle('req-number', requirements.number);
+        toggle('req-email', requirements.email);
+        toggle('req-common', requirements.common);
+    }
+
+   
+    passwordInput.addEventListener('input', function() {
+        if (passwordInput.value.length > 0) {
+            requirementsDiv.style.display = 'block';
+            const requirements = checkPasswordRequirements(passwordInput.value, emailInput.value);
+            updateRequirementUI(requirements);
+        } else {
+            requirementsDiv.style.display = 'none';
+        }
+    });
+
+   
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const password = passwordInput.value;
+        const email = emailInput.value;
+
+        if (email.trim() === '') {
+            alert("Please enter your email address.");
+            return;
+        }
+
+        if (!email.includes('@') || !email.includes('.')) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        if (password.trim() === '') {
+            alert("Please enter your password.");
+            return;
+        }
+
+        const requirements = checkPasswordRequirements(password, email);
+        updateRequirementUI(requirements);
+
+        const allValid = Object.values(requirements).every(Boolean);
+
+        if (!allValid) {
+            alert("Password does not meet all requirements.");
+            return;
+        }
+
+        alert("✅ Great! Your account has been successfully created!");
+    });
+});
+</script>
+
+</body>
+</html>
