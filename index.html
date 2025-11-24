@@ -21,9 +21,9 @@
 				</div>
 				<form class="prijava">
 					<label for="email">Email address*</label>
-					<input type="email" id="email" name="email" required>
+					<input type="email" id="email" name="email" maxlength="30" required>
 					<label for="geslo">Password*</label>
-					<input type="password" id="geslo" name="geslo" required>
+					<input type="password" id="geslo" name="geslo" minlength="8" maxlength="30" required>
 					<button type="submit" class="continue">ACCEPT AND CONTINUE</button>
 				</form>
 				<div class="ali">
@@ -83,3 +83,4 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </body>
 </html>
+
