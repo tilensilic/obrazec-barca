@@ -123,6 +123,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    width:100%;
 }
 .google{
     display:flex;
@@ -168,6 +169,7 @@ body, html {
         margin: 0 auto;
     }
 }
+
 
 
 
