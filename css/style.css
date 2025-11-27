@@ -126,6 +126,7 @@ body, html {
     border-radius:10px;
     padding:5px;
     float:left;
+    width:40%;
 }
 .apple{
     display:flex;
@@ -133,6 +134,7 @@ body, html {
     justify-content:center;
     border-radius:10px;
     padding:5px;
+    width:40%;
 }
 .ali hr {
     flex-grow: 1;
@@ -162,5 +164,6 @@ body, html {
         margin: 0 auto;
     }
 }
+
 
 
