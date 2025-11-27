@@ -119,7 +119,11 @@ body, html {
     font-size: 13px;
     width: 100%;
 }
-
+.google{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
 .ali hr {
     flex-grow: 1;
     border: none;
@@ -148,3 +152,4 @@ body, html {
         margin: 0 auto;
     }
 }
+
