@@ -57,8 +57,8 @@ body, html {
 }
 
 .glava p {
-    font-size: 14px;
-    color: #b3b3b3;
+    font-size: 15px;
+    color: #d0d0d0;
     margin-bottom: 25px;
     line-height: 1.5;
 }
@@ -94,7 +94,7 @@ body, html {
 
 .continue {
     margin-top: 15px;
-    padding: 12px;
+    padding: 15px 0;
     width: 100%;
     border: none;
     border-radius: 4px;
@@ -115,36 +115,83 @@ body, html {
     align-items: center;
     gap: 10px;
     margin: 25px 0;
-    color: #999;
+    color: white;
     font-size: 13px;
     width: 100%;
+    font-weight: 600;
 }
 .prijava2{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 5px;
     width:100%;
 }
 .google{
     display:flex;
     align-items:center;
     justify-content:center;
-    border-radius:10px;
-    padding:5px;
-    width:40%;
+    border-radius:4px;
+    padding:10px 0;
+    width:100%;
+    background-color: white;
+    font-weight: bold;
+    border: none;
+    transition: background 1s ease;
 }
 .apple{
     display:flex;
     align-items:center;
     justify-content:center;
-    border-radius:10px;
-    padding:5px;
-    width:40%;
+    border-radius:4px;
+    padding:10px 0;
+    width:100%;
+    background-color: white;
+    border: none;
+    font-weight: bold;
+    transition: background 1s ease;
+}
+.google:hover{
+    background-color: rgb(200, 200, 200);
+}
+.apple:hover{
+    background-color: rgb(200, 200, 200);
 }
 .ali hr {
     flex-grow: 1;
     border: none;
-    border-top: 1px solid #2d2b4b;
+    border-top: 1px solid white;
+}
+
+.info{
+   color: #d0d0d0;
+   font-size: 12px;
+   font-style: italic;
+   text-align: left;
+}
+.info a{
+   text-decoration: none;
+   font-weight: bold;
+   color: #d0d0d0;
+   transition: color 0.3s ease;
+}
+.info a:hover{
+    color: white;
+ }
+.registracija-link{
+    margin-top: 30px;
+    font-size: 15px;
+    color: #d0d0d0;
+}
+.registracija{
+   text-decoration: none;
+   font-weight: bold;
+   color: #d0d0d0;
+   transition: color 0.3s ease;
+}
+.registracija:hover{
+    color: white;
 }
 
 @media (max-width: 768px) {
