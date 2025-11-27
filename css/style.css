@@ -123,6 +123,16 @@ body, html {
     display:flex;
     align-items:center;
     justify-content:center;
+    border-radius:10px;
+    padding:5px;
+    float:left;
+}
+.apple{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+    padding:5px;
 }
 .ali hr {
     flex-grow: 1;
@@ -152,4 +162,5 @@ body, html {
         margin: 0 auto;
     }
 }
+
 
