@@ -253,101 +253,63 @@
     </div>
 
 
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const passwordInput = document.getElementById('password');
-    const emailInput = document.getElementById('email');
-    const requirementsDiv = document.getElementById('passwordRequirements');
-    const form = document.getElementById('registerForm');
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("registerForm");
 
-    const commonPasswords = [
-        "123456", "password", "qwerty", "abc123", "111111",
-        "letmein", "football", "iloveyou", "admin", "welcome"
-    ];
-
-
-    function checkPasswordRequirements(password, email) {
-        const emailLocal = (email && email.includes('@')) ? email.split('@')[0].toLowerCase() : '';
-        return {
-            length: password.length >= 8,
-            case: /[a-z]/.test(password) && /[A-Z]/.test(password),
-            number: /[0-9]/.test(password) || /[^a-zA-Z0-9]/.test(password),
-            email: !(emailLocal && password.toLowerCase().includes(emailLocal)),
-            common: !commonPasswords.some(common => password.toLowerCase().includes(common))
-        };
-    }
-
-    
-    function updateRequirementUI(requirements) {
-        function toggle(id, valid) {
-            const el = document.getElementById(id);
-            if (!el) return;
-            const icon = el.querySelector('.req-icon');
-            if (valid) {
-                el.classList.add('valid');
-                el.classList.remove('invalid');
-                icon.textContent = '✓';
-            } else {
-                el.classList.remove('valid');
-                el.classList.add('invalid');
-                icon.textContent = '✗';
-            }
-        }
-        toggle('req-length', requirements.length);
-        toggle('req-case', requirements.case);
-        toggle('req-number', requirements.number);
-        toggle('req-email', requirements.email);
-        toggle('req-common', requirements.common);
-    }
-
-   
-    passwordInput.addEventListener('input', function() {
-        if (passwordInput.value.length > 0) {
-            requirementsDiv.style.display = 'block';
-            const requirements = checkPasswordRequirements(passwordInput.value, emailInput.value);
-            updateRequirementUI(requirements);
-        } else {
-            requirementsDiv.style.display = 'none';
-        }
-    });
-
-   
-    form.addEventListener('submit', function(e) {
+    form.addEventListener("submit", function(e) {
         e.preventDefault();
 
-        const password = passwordInput.value;
-        const email = emailInput.value;
+        const firstName = document.getElementById("first-name").value.trim();
+        const lastName = document.getElementById("last-name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const country = document.getElementById("country").value.trim();
 
-        if (email.trim() === '') {
-            alert("Please enter your email address.");
+        const hasLength = password.length >= 8;
+        const hasCase = /[a-z]/.test(password) && /[A-Z]/.test(password);
+        const hasNumberOrSpecial = /[0-9!@#$%^&*]/.test(password);
+        const notEmail = !password.includes(email);
+
+        if(!firstName || !lastName || !email || !password || !country){
+            Swal.fire({
+                icon: 'error',
+                title: 'Napaka',
+                text: 'Prosimo, izpolnite vsa obvezna polja.',
+                confirmButtonColor: '#4c4873'
+            });
             return;
         }
 
-        if (!email.includes('@') || !email.includes('.')) {
-            alert("Please enter a valid email address.");
+        if(!hasLength || !hasCase || !hasNumberOrSpecial || !notEmail){
+            Swal.fire({
+                icon: 'warning',
+                title: 'Geslo ni ustrezno',
+                html: `
+                    <ul style="text-align:left;">
+                        <li>${hasLength ? '✅' : '❌'} vsaj 8 znakov</li>
+                        <li>${hasCase ? '✅' : '❌'} velike in male črke</li>
+                        <li>${hasNumberOrSpecial ? '✅' : '❌'} številka ali posebni znak</li>
+                        <li>${notEmail ? '✅' : '❌'} ne vsebuje email naslova</li>
+                    </ul>
+                `,
+                confirmButtonColor: '#4c4873'
+            });
             return;
         }
 
-        if (password.trim() === '') {
-            alert("Please enter your password.");
-            return;
-        }
-
-        const requirements = checkPasswordRequirements(password, email);
-        updateRequirementUI(requirements);
-
-        const allValid = Object.values(requirements).every(Boolean);
-
-        if (!allValid) {
-            alert("Password does not meet all requirements.");
-            return;
-        }
-
-        alert("✅ Great! Your account has been successfully created!");
+        Swal.fire({
+            icon: 'success',
+            title: 'Registracija uspešna!',
+            text: `Dobrodošli, ${firstName} ${lastName}! 🎉`,
+            confirmButtonColor: '#4c4873'
+        });
     });
 });
 </script>
+
 
 </body>
 </html>
