@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-	<link rel="stylesheet" href="css/tyle.css" type="text/css" media="all" />		
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />		
 </head>
 <body>
 	<div class="glavno">
@@ -52,10 +52,10 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector(".prijava");
+		document.addEventListener("DOMContentLoaded", function() {
+		const form = document.querySelector(".prijava");
 
-    form.addEventListener("submit", function(e) {
+		form.addEventListener("submit", function(e) {
         e.preventDefault(); 
 
         const email = document.getElementById("email").value.trim();
@@ -75,13 +75,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 text: 'Prosimo, izpolnite vsa polja.',
                 confirmButtonColor: '#4c4873'
             });
-        }
-    });
+		}
+	});
 });
 </script>
 
 
 </body>
 </html>
-
-
